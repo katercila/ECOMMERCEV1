@@ -1,0 +1,234 @@
+* {box-sizing: border-box;}
+body {font-family: custom,Univers,Helvetica Neue,Helvetica,Arial,sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+nav {
+    width: 60%;
+    margin: 0 auto;
+    background: transparent;
+    padding: 5px;
+    box-shadow: 0px 5px 0px #dedede;
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+    height: 20px;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 2px;
+    text-decoration: none;
+    color: rgb(7, 3, 0);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: rgb(131, 218, 25);
+  }
+
+/* SLIDESHOW */
+.slideshow-container {
+  max-width: 700px;
+  max-height: 500px;
+  /* fixed or relative? */
+  position: relative;
+  margin: auto;
+  padding-top: 100px;
+ 
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: lime ;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #27b8ed;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  h1{
+    text-align: center;
+  }
+   /* BOXES IN MIDDLE */
+  .boxes{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+    
+    /* height: 100vh; 100% of the viewport height */
+  }
+ .box1 {
+    width: 225px;
+    height: 215px;
+    /* border:solid rgb(131, 218, 25) */
+    background-image: url(Images/eco2.png);
+    
+}
+.box2 {
+    width: 238px;
+    height: 250px;
+    background-image: url(Images/giving.png); 
+}
+
+article {
+  padding-top: 70px;
+  font-size: .90rem;
+  text-transform: uppercase;
+  color: #656565;
+  
+
+}
+
+  /* FOOTER */
+  footer{
+    /* position: absolute;  cda */
+    bottom: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    left: 0;
+    /* right: 0; */
+    height: 30%;
+
+}
+/* entire footer bar */
+.container{
+    display: flex;
+    padding: 1rem; 
+}
+/* SOCIAL MEDIA BUTTONS */
+
+.container .section{
+    flex-basis: 50%;
+    padding: 0 2px;
+}
+/* subscribe */
+.section h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section .content{
+  margin: 10px 0 0 0;
+    position: relative;
+    color: #656565;
+    font-size: 12px;
+}
+
+.section .content::before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+}
+/* line under subscribe and about */
+.section .content::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 50%;
+    background-color:  #f6a21b;
+    top: -10px;
+}
+/* how do i make this responsive in mobile? */
+.container section center{
+  justify-content: center;
+  display: flex; 
+}
+.left section .content .social a span:hover{ 
+    background: #dd5f24; 
+ } 
+ /* Email text */
+ .right form .text{
+     font-size: 1rem;
+     margin-bottom: 3px;
+     color: #656565;
+ }
+ /* email type bar */
+ .right form input{
+     width: 100%;
+     font-size: 1.0625rem;
+     background: transparent;
+     border: 1px solid rgb(131, 218, 25);
+ }
+ /* email input area */
+ .right form input{
+     height: 25px;
+ }
+ /* space between button and email text area */
+ .right form .btn{
+     margin-top: 20px;
+ }
+ /* subscribe button */
+ .right form .btn button{
+     height: 40px;
+     width: 100%;
+     border:none;
+     outline: none;
+     background:  #f6a21b; 
+     font-size: 1.0625rem;
+     font-weight: 500;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+ /* button background color */
+ 
+ .right form .btn button:hover{
+     background: skyblue;
+ }   
+
+ @media screen and (max-width:700px){
+  footer{
+      /* position: relative; */
+      bottom: 0px;
+  }
+
+  .left .content{
+      padding-right:0px;
+      padding-bottom: 30px;
+  }
+
+  .container{
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding:0.5rem;
+  }
+
+  .container .section{
+      /* margin:5px 0; */
+  }
+} 
